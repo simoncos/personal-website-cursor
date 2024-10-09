@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Interesting Topic | Your Name's Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/load-nav.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Personal Website</h1>
+    </header>
+    <div id="navigation-placeholder"></div>
+    <div class="container">
+        <article class="blog-post">
+            <div class="post-content">
+                
+        <h1>Another Interesting Topic</h1>
+        <p class="post-meta">Created: 2024-10-10 00:10:22 | Last Updated: 2024-10-10 00:10:22</p>
+        
+<p>Welcome to my second blog post! This one covers another fascinating subject.</p>
+<h2>What We'll Explore</h2>
+<ul>
+<li>Advanced blogging techniques</li>
+<li>Linking between posts</li>
+<li>Using markdown effectively</li>
+</ul>
+<p>As mentioned in <a href="first-blog-post.html">My First Blog Post</a>, we're building a simple but effective blogging system.</p>
+<h2>Advanced Techniques</h2>
+<p>Here are some advanced techniques we can use:</p>
+<ol>
+<li><strong>Internal linking</strong>: As you can see, we're linking to other posts.</li>
+<li><strong>Markdown formatting</strong>: Using <em>italics</em>, <strong>bold</strong>, and <code>code snippets</code>.</li>
+<li><strong>Lists</strong>: Like this one!</li>
+</ol>
+<h2>Conclusion</h2>
+<p>Blogging with markdown and static HTML generation can be both simple and powerful.</p>
+        
+            </div>
+            <div class="post-tags">
+                <h3>Tags:</h3>
+                <ul class="tag-list"><li><a href="/tags.html#webdev">webdev</a></li></ul>
+            </div>
+            <div class="post-backlinks">
+                <h3>Backlinks:</h3>
+                <ul id="backlinks-list"></ul>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script>
+        // Script to populate backlinks
+        document.addEventListener('DOMContentLoaded', function() {
+            var backlinks = JSON.parse('[]');
+            var backlinkslist = document.getElementById('backlinks-list');
+            if (backlinks.length === 0) {
+                backlinkslist.innerHTML = '<li>No backlinks found.</li>';
+            } else {
+                backlinks.forEach(function(link) {
+                    var li = document.createElement('li');
+                    var a = document.createElement('a');
+                    a.href = link.file;
+                    a.textContent = link.title;
+                    li.appendChild(a);
+                    backlinkslist.appendChild(li);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

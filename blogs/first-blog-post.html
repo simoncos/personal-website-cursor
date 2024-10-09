@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my first blog post! | Your Name's Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/load-nav.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Personal Website</h1>
+    </header>
+    <div id="navigation-placeholder"></div>
+    <div class="container">
+        <article class="blog-post">
+            <div class="post-content">
+                
+        <h1>Welcome to my first blog post!</h1>
+        <p class="post-meta">Created: 2024-10-09 23:33:35 | Last Updated: 2024-10-09 23:33:34</p>
+        
+<p>This is a paragraph with an <span class="annotated-word" data-word="annotated word">annotated word</span>. When you click on it, it will open a Google search for "annotated word".</p>
+<p>Here's an SVG image:</p>
+<p><img alt="Test SVG Image" src="assets/images/test-image.svg"/></p>
+<p>This image is stored in the assets folder.</p>
+        
+            </div>
+            <div class="post-tags">
+                <h3>Tags:</h3>
+                <ul class="tag-list"><li><a href="/tags.html#webdev">webdev</a></li><li><a href="/tags.html#beginners">beginners</a></li><li><a href="/tags.html#python">python</a></li></ul>
+            </div>
+            <div class="post-backlinks">
+                <h3>Backlinks:</h3>
+                <ul id="backlinks-list"></ul>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script>
+        // Script to populate backlinks
+        document.addEventListener('DOMContentLoaded', function() {
+            var backlinks = JSON.parse('[{"title": "The Third Blog Post", "file": "the-third.html"}, {"title": "Another Interesting Topic", "file": "another-interesting-topic.html"}]');
+            var backlinkslist = document.getElementById('backlinks-list');
+            if (backlinks.length === 0) {
+                backlinkslist.innerHTML = '<li>No backlinks found.</li>';
+            } else {
+                backlinks.forEach(function(link) {
+                    var li = document.createElement('li');
+                    var a = document.createElement('a');
+                    a.href = link.file;
+                    a.textContent = link.title;
+                    li.appendChild(a);
+                    backlinkslist.appendChild(li);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

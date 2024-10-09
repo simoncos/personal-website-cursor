@@ -1,0 +1,439 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-top: none; /* Ensure no border above the container */
+}
+
+/* Blog styles */
+.blog-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.metadata {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.backlinks {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Tags page styles */
+.tag-list, #backlinks-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tag-list li, #backlinks-list li {
+    display: inline-block;
+    margin-right: 6px; /* Reduced */
+    margin-bottom: 3px; /* Reduced */
+}
+
+.tag-list a, #backlinks-list a {
+    text-decoration: none;
+    color: #666;
+}
+
+/* Specific styles for tags */
+.tag-list a {
+    padding: 1px 5px; /* Slightly reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.tag-list a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Specific styles for backlinks */
+#backlinks-list a {
+    color: #0066cc;
+    transition: color 0.2s ease;
+}
+
+#backlinks-list a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+.tag-section {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.active-tag {
+    font-weight: bold;
+    background-color: #d0d0d0;
+}
+
+/* Series page styles */
+.series-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.series-list li {
+    margin-bottom: 20px;
+}
+
+.series-posts {
+    margin-left: 20px;
+}
+
+/* Blog post tags */
+.post-tags, .post-backlinks {
+    margin-top: 1em;
+    padding-top: 0.5em;
+    border-top: 1px solid #e0e0e0;
+    /* Removed background-color */
+}
+
+.post-tags h3, .post-backlinks h3 {
+    font-size: 1em;  /* Same size as content */
+    font-weight: bold;
+    margin: 0 0 0.2em 0; /* Reduced bottom margin */
+    color: #333;
+}
+
+.blog-tags {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-tags ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blog-tags li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.blog-tags a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.blog-tags a:hover {
+    background-color: #e0e0e0;
+}
+
+.container h2 {
+    margin-top: 2em;
+    /* Remove this line to get rid of the border */
+    /* border-bottom: 1px solid #ccc; */
+    padding-bottom: 0.5em;
+}
+
+.container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.container ul li {
+    margin-bottom: 0.5em;
+}
+
+.container ul li a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.container ul li a:hover {
+    text-decoration: underline;
+}
+
+.blog-preview {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-preview h3 {
+    margin-bottom: 0.5em;
+}
+
+.blog-preview h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.blog-preview h3 a:hover {
+    color: #0066cc;
+}
+
+.post-meta {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.5em;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.blog-post {
+    font-size: 1em;  /* Base font size for the entire blog post */
+    line-height: 1.6;
+}
+
+.blog-post h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.blog-post h2 {
+    font-size: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+.blog-post h3 {
+    font-size: 1.7em;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+.blog-post h4 {
+    font-size: 1.4em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #666;
+}
+
+.blog-post h5 {
+    font-size: 1.2em;
+    margin-top: 0.8em;
+    margin-bottom: 0.5em;
+    color: #777;
+}
+
+.blog-post h6 {
+    font-size: 1em;
+    margin-top: 0.6em;
+    margin-bottom: 0.5em;
+    color: #888;
+}
+
+.post-content {
+    margin-bottom: 1em; /* Reduced from 2em */
+}
+
+.post-tags, .post-backlinks {
+    margin-top: 1em;
+    padding-top: 0.5em;
+    border-top: 1px solid #e0e0e0;
+    /* Removed background-color */
+}
+
+.post-tags h3, .post-backlinks h3 {
+    font-size: 1em;  /* Same size as content */
+    font-weight: bold;
+    margin: 0 0 0.2em 0; /* Reduced bottom margin */
+    color: #333;
+}
+
+.tag-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tag-list li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.tag-list a {
+    text-decoration: none;
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #333;
+}
+
+.tag-list a:hover {
+    background-color: #e0e0e0;
+}
+
+#backlinks-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#backlinks-list li {
+    margin-bottom: 5px;
+}
+
+#backlinks-list a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+#backlinks-list a:hover {
+    text-decoration: underline;
+}
+
+/* Add these styles for the blog listings page */
+.blog-preview {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-preview h4 {
+    margin-bottom: 0.5em;
+}
+
+.blog-preview h4 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.blog-preview h4 a:hover {
+    color: #0066cc;
+}
+
+.blog-preview .post-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+.blog-preview .read-more {
+    display: inline-block;
+    margin-top: 0.5em;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.blog-preview .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Blog post styles */
+.blog-post h1 {
+    font-size: 2.5em;
+    margin-top: 0; /* Ensure no extra space above the title */
+    margin-bottom: 0.5em;
+    color: #333;
+    border-bottom: none; /* Ensure no border under the main title */
+}
+
+.blog-post h2 {
+    font-size: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+.blog-post h3 {
+    font-size: 1.7em;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+.blog-post h4 {
+    font-size: 1.4em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #666;
+}
+
+.blog-post h5 {
+    font-size: 1.2em;
+    margin-top: 0.8em;
+    margin-bottom: 0.5em;
+    color: #777;
+}
+
+.blog-post h6 {
+    font-size: 1em;
+    margin-top: 0.6em;
+    margin-bottom: 0.5em;
+    color: #888;
+}
+
+.blog-post p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+/* Add more specific styles for other elements in your blog posts as needed */
+
+/* Add a separator between tags and backlinks if they're adjacent */
+.post-tags + .post-backlinks {
+    margin-top: 0.5em; /* Reduced */
+    padding-top: 0.5em; /* Reduced */
+    border-top: 1px solid #e0e0e0;
+}
