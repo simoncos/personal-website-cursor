@@ -608,3 +608,19 @@ nav ul li a.active {
 .dark-mode .post-backlinks h3 {
     color: #e0e0e0;
 }
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.dark-mode footer {
+    border-top-color: #444;
+}
+
+footer p {
+    margin: 0;
+}
