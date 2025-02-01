@@ -1,5 +1,6 @@
 ---
 tags: webdev
+series: 2
 ---
 
 # Another Interesting Topic

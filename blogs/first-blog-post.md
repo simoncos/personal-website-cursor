@@ -1,5 +1,6 @@
 ---
 tags: webdev, beginners, python
+series: 1
 ---
 
 # Welcome to my first blog post!

@@ -1,1 +1,21 @@
-{}
+{
+  "1": [
+    {
+      "title": "Welcome to my first blog post!",
+      "file": "first-blog-post.html",
+      "part": ""
+    }
+  ],
+  "2": [
+    {
+      "title": "Another Interesting Topic",
+      "file": "another-interesting-topic.html",
+      "part": ""
+    },
+    {
+      "title": "The Third Blog Post",
+      "file": "the-third.html",
+      "part": ""
+    }
+  ]
+}

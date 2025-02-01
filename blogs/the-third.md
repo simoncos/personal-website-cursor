@@ -1,5 +1,6 @@
 ---
 tags: beginners
+series: 2
 ---
 
 # The Third Blog Post

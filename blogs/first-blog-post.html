@@ -17,7 +17,7 @@
             <div class="post-content">
                 
         <h1>Welcome to my first blog post!</h1>
-        <p class="post-meta">Created: 2024-10-09 23:33:35 | Last Updated: 2024-10-09 23:33:34</p>
+        <p class="post-meta">Created: 2025-02-01 22:05:40 | Last Updated: 2025-02-01 22:05:40</p>
         
 <p>This is a paragraph with an <span class="annotated-word" data-word="annotated word">annotated word</span>. When you click on it, it will open a Google search for "annotated word".</p>
 <p>Here's an SVG image:</p>
@@ -36,12 +36,12 @@
         </article>
     </div>
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Your Name. All rights reserved.</p>
     </footer>
     <script>
         // Script to populate backlinks
         document.addEventListener('DOMContentLoaded', function() {
-            var backlinks = JSON.parse('[{"title": "The Third Blog Post", "file": "the-third.html"}, {"title": "Another Interesting Topic", "file": "another-interesting-topic.html"}]');
+            var backlinks = JSON.parse('[{"title": "Another Interesting Topic", "file": "another-interesting-topic.html"}, {"title": "The Third Blog Post", "file": "the-third.html"}]');
             var backlinkslist = document.getElementById('backlinks-list');
             if (backlinks.length === 0) {
                 backlinkslist.innerHTML = '<li>No backlinks found.</li>';

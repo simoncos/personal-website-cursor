@@ -1,22 +1,22 @@
 {
-  "beginners": [
-    {
-      "title": "The Third Blog Post",
-      "file": "the-third.html"
-    },
+  "webdev": [
     {
       "title": "Welcome to my first blog post!",
       "file": "first-blog-post.html"
-    }
-  ],
-  "webdev": [
+    },
     {
       "title": "Another Interesting Topic",
       "file": "another-interesting-topic.html"
-    },
+    }
+  ],
+  "beginners": [
     {
       "title": "Welcome to my first blog post!",
       "file": "first-blog-post.html"
+    },
+    {
+      "title": "The Third Blog Post",
+      "file": "the-third.html"
     }
   ],
   "python": [
