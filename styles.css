@@ -33,6 +33,11 @@ nav ul li a {
     color: #333;
 }
 
+nav ul li a.active {
+    color: #0066cc;
+    font-weight: bold;
+}
+
 .container {
     width: 80%;
     max-width: 800px;

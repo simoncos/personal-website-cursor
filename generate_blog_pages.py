@@ -32,20 +32,21 @@ class AnnotateExtension(Extension):
         md.preprocessors.register(AnnotatePreprocessor(md), 'annotate', 175)
 
 def parse_metadata(md_content):
-    metadata = {}
+    metadata = {
+        'tags': '',
+        'series': '',
+        'series_part': '',
+        'date': datetime.now().strftime('%Y-%m-%d')
+    }
     metadata_match = re.match(r'---\n(.*?)\n---\n', md_content, re.DOTALL)
     if metadata_match:
         metadata_str = metadata_match.group(1)
-        print(f"Raw metadata string: {metadata_str}")
         for line in metadata_str.split('\n'):
             if ':' in line:
                 key, value = line.split(':', 1)
                 metadata[key.strip()] = value.strip()
-            else:
-                print(f"Warning: Invalid metadata line - {line}")
         content = md_content[metadata_match.end():]
     else:
-        print("Warning: No metadata section found")
         content = md_content
     return metadata, content
 
@@ -82,6 +83,11 @@ def extract_title_and_content(html_content):
     return title, content
 
 def generate_blog_pages():
+    # Add error handling for missing directories
+    if not os.path.exists('blogs'):
+        os.makedirs('blogs')
+        print("Created blogs directory")
+
     tags_data = defaultdict(list)
     backlinks = defaultdict(list)
     series_data = defaultdict(list)
