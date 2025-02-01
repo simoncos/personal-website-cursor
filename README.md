@@ -54,3 +54,87 @@ A modern, feature-rich static blog website with clean design and enhanced user e
 - CSS-based theming system
 
 ## File Structure 
+
+```
+├── assets/
+│ ├── css/
+│ │ ├── styles.css
+│ │ └── ...
+│ └── js/
+│ ├── dark-mode.js
+│ ├── toc-generator.js
+│ ├── progress-bar.js
+│ └── ...
+├── blogs/
+│ └── (markdown files)
+├── templates/
+│ ├── blog-template.html
+│ └── ...
+└── data/
+├── blog_data.json
+├── tags_data.json
+└── series_data.json
+```
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- Python (for static site generation)
+- Markdown
+- JSON
+
+## Setup and Usage
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Add markdown files to the `blogs/` directory
+4. Run the blog generator:
+   ```bash
+   python generate_blog_pages.py
+   ```
+
+## Blog Post Format
+
+```markdown
+---
+tags: tag1, tag2
+series: series_name
+series_part: 1
+---
+Post Title
+Content goes here...
+```
+
+## Customization
+
+### Theme Colors
+Main colors can be customized in `styles.css`:
+- Light mode colors
+- Dark mode colors
+- Progress bar gradients
+- Link and accent colors
+
+### Templates
+Blog templates can be modified in the `templates/` directory to change:
+- Page layout
+- Header/footer content
+- Navigation structure
+
+## Browser Support
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+Feel free to submit issues and enhancement requests.
+
+## License
+[Your chosen license]
+
+## Author
+[Your Name] 
