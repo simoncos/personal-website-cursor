@@ -624,3 +624,33 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Progress bar styles */
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.1);  /* Light gray background */
+    z-index: 1000;
+}
+
+#reading-progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, #4a90e2, #67b26f);  /* Blue to green gradient */
+    transition: width 0.1s ease;
+    border-radius: 0 2px 2px 0;  /* Rounded right edge */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
+}
+
+/* Dark mode progress bar */
+.dark-mode #progress-container {
+    background-color: rgba(255, 255, 255, 0.1);  /* Slightly visible in dark mode */
+}
+
+.dark-mode #reading-progress {
+    background: linear-gradient(to right, #00c6ff, #0072ff);  /* Bright blue gradient */
+    box-shadow: 0 0 3px rgba(0, 198, 255, 0.3);  /* Glowing effect */
+}
