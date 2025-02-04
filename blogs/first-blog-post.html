@@ -47,7 +47,7 @@
     <script>
         // Script to populate backlinks
         document.addEventListener('DOMContentLoaded', function() {
-            var backlinks = JSON.parse('[{"title": "Another Interesting Topic", "file": "another-interesting-topic.html"}, {"title": "The Third Blog Post", "file": "the-third.html"}]');
+            var backlinks = JSON.parse('[]');
             var backlinkslist = document.getElementById('backlinks-list');
             if (backlinks.length === 0) {
                 backlinkslist.innerHTML = '<li>No backlinks found.</li>';
