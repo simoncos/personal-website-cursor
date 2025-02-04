@@ -336,7 +336,21 @@ nav ul li a.active {
 }
 
 #backlinks-list li {
-    margin-bottom: 5px;
+    display: block;  /* Changed from inline-block to block */
+    margin-bottom: 8px;  /* Added more space between items */
+    position: relative;  /* For bullet styling */
+    padding-left: 15px;  /* Space for bullet */
+}
+
+#backlinks-list li:before {
+    content: "•";  /* Bullet point */
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+.dark-mode #backlinks-list li:before {
+    color: #999;  /* Lighter bullet color for dark mode */
 }
 
 #backlinks-list a {
