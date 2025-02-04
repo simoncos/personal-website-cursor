@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show loading state
     blogList.innerHTML = '<li>Loading blog posts...</li>';
     
-    fetch('blog_data.json')
+    fetch('/data/blog_data.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);

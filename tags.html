@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tags - My Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="load-nav.js"></script>
-    <script src="/dark-mode.js"></script>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <script src="/src/js/load-nav.js"></script>
+    <script src="/src/js/dark-mode.js"></script>
     <style>
         .tag-list {
             list-style-type: none;
@@ -161,7 +161,7 @@
 
         let tagsData;
 
-        fetch('tags_data.json')
+        fetch('/data/tags_data.json')
             .then(response => response.json())
             .then(data => {
                 console.log('Tags data loaded:', data);

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Series - My Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="load-nav.js"></script>
-    <script src="/dark-mode.js"></script>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <script src="/src/js/load-nav.js"></script>
+    <script src="/src/js/dark-mode.js"></script>
 </head>
 <body>
     <header>
@@ -21,7 +21,7 @@
     <script>
         async function loadSeriesData() {
             try {
-                const response = await fetch('series_data.json');
+                const response = await fetch('/data/series_data.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

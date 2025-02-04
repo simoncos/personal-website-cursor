@@ -1,128 +1,124 @@
 # Personal Blog Website
 
-A modern, feature-rich static blog website with clean design and enhanced user experience.
+A modern, minimalist static blog generator that creates a feature-rich website from markdown files. Built with vanilla JavaScript and Python, focusing on clean design and enhanced reading experience.
 
-## Features
+## Key Features
 
-### Core Functionality
-- Static blog generation from markdown files
-- Clean and responsive design
-- Navigation system with active page highlighting
-- Dynamic blog listing with dates and previews
-- Automatic copyright year updates
+### Content Management
+- **Markdown-Based**: Write blog posts in markdown with YAML frontmatter
+- **Tags & Series**: Organize content with tags and group related posts into series
+- **Backlinks**: Automatic bi-directional linking between related posts
+- **Static Generation**: Fast, secure, and SEO-friendly static HTML pages
 
-### Content Organization
-- **Tags System**
-  - Tag-based post organization
-  - Tag cloud visualization
-  - Filtered post viewing by tag
+### User Experience
+- **Dark Mode**: System-aware theme with toggle switch
+- **Reading Progress**: Visual indicator of reading progress
+- **Table of Contents**: Auto-generated, hierarchical navigation
+- **Responsive Design**: Mobile-first, clean interface
 
-- **Series System**
-  - Group related posts into series
-  - Automatic series navigation
-  - Series progress tracking
-
-- **Backlinks**
-  - Automatic backlink generation
-  - Two-way post linking
-  - Reference tracking
-
-### Reading Experience
-- **Table of Contents**
-  - Auto-generated from headings
-  - Smooth scroll navigation
-  - Hierarchical structure
-  - Dynamic highlighting
-
-- **Progress Bar**
-  - Reading progress indicator
-  - Smooth animations
-  - Adaptive colors for dark/light modes
-  - Fixed position for easy tracking
-
-- **Dark Mode**
-  - System preference detection
-  - Toggle button in header
-  - Persistent preference saving
-  - Optimized color schemes
-
-### Technical Features
-- Markdown support with extended syntax
-- JSON-based data management
-- Automated page generation
-- Client-side JavaScript enhancements
-- CSS-based theming system
-
-## File Structure 
+## Project Structure
 
 ```
-├── assets/
-│ ├── css/
-│ │ ├── styles.css
-│ │ └── ...
-│ └── js/
-│ ├── dark-mode.js
-│ ├── toc-generator.js
-│ ├── progress-bar.js
-│ └── ...
+├── src/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       ├── dark-mode.js
+│       ├── load-nav.js
+│       ├── load-blog-list.js
+│       ├── toc-generator.js
+│       └── progress-bar.js
+├── data/
+│   ├── series_data.json
+│   └── tags_data.json
 ├── blogs/
-│ └── (markdown files)
+│   ├── *.md (markdown files)
+│   └── *.html (generated blog pages)
 ├── templates/
-│ ├── blog-template.html
-│ └── ...
-└── data/
-├── blog_data.json
-├── tags_data.json
-└── series_data.json
+│   ├── blog-template.html
+│   └── blogs-listing-template.html
+├── index.html
+├── about.html
+├── blogs.html
+├── series.html
+├── tags.html
+├── navigation.html
+├── requirements.txt
+├── generate_blog_pages.py
+└── README.md
 ```
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Python (for static site generation)
-- Markdown
-- JSON
+## Quick Start
 
-## Setup and Usage
-
-1. Clone the repository
-2. Install dependencies:
+1. **Setup**
    ```bash
+   # Clone repository
+   git clone [repository-url]
+   cd [repository-name]
+
+   # Install dependencies
    pip install -r requirements.txt
    ```
-3. Add markdown files to the `blogs/` directory
-4. Run the blog generator:
+
+2. **Create Content**
+   ```markdown
+   # blogs/my-post.md
+   ---
+   tags: tech, tutorial
+   series: getting-started
+   series_part: 1
+   ---
+   # My First Blog Post
+   Content goes here...
+   ```
+
+3. **Generate Site**
    ```bash
    python generate_blog_pages.py
    ```
 
-## Blog Post Format
+## Writing Posts
 
+### Frontmatter Options
 ```markdown
 ---
-tags: tag1, tag2
-series: series_name
-series_part: 1
+tags: tag1, tag2          # Comma-separated tags
+series: series-name       # Optional series name
+series_part: 1           # Optional series part number
 ---
-Post Title
-Content goes here...
 ```
+
+### Supported Features
+- Standard Markdown syntax
+- Inline annotations with `[[word]]`
+- Image references from `assets/` directory
+- Internal links between posts
+- Code blocks with syntax highlighting
+
+## Development
+
+### Prerequisites
+- Python 3.7+
+- Web browser (Chrome/Firefox/Safari/Edge latest versions)
+- Basic knowledge of HTML, CSS, and JavaScript
+
+### Dependencies
+- `markdown`: Markdown to HTML conversion
+- `beautifulsoup4`: HTML processing
 
 ## Customization
 
-### Theme Colors
-Main colors can be customized in `styles.css`:
-- Light mode colors
-- Dark mode colors
-- Progress bar gradients
-- Link and accent colors
+### Styling
+Edit `src/css/styles.css` to modify:
+- Color schemes (light/dark modes)
+- Typography and spacing
+- Layout and responsive breakpoints
 
 ### Templates
-Blog templates can be modified in the `templates/` directory to change:
-- Page layout
-- Header/footer content
-- Navigation structure
+Modify templates in `templates/` to change:
+- Page structure
+- Navigation elements
+- Meta tags and SEO elements
 
 ## Browser Support
 - Chrome (latest)
@@ -131,10 +127,17 @@ Blog templates can be modified in the `templates/` directory to change:
 - Edge (latest)
 
 ## Contributing
-Feel free to submit issues and enhancement requests.
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
-[Your chosen license]
+[MIT/Your chosen license]
 
 ## Author
-[Your Name] 
+[Your Name]
+
+---
+Built with vanilla JavaScript and Python. No frameworks, no complexity. 

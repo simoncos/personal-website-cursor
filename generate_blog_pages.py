@@ -168,10 +168,10 @@ def generate_blog_pages():
                 'part': metadata.get('series_part', '')
             })
 
-    with open('series_data.json', 'w') as f:
+    with open('data/series_data.json', 'w') as f:
         json.dump(series_data, f, indent=2)
 
-    with open('tags_data.json', 'w') as f:
+    with open('data/tags_data.json', 'w') as f:
         json.dump(tags_data, f, indent=2)
 
     print("Blog pages and tags data generated successfully!")
