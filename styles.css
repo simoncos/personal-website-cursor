@@ -668,3 +668,44 @@ footer p {
     background: linear-gradient(to right, #00c6ff, #0072ff);  /* Bright blue gradient */
     box-shadow: 0 0 3px rgba(0, 198, 255, 0.3);  /* Glowing effect */
 }
+
+/* Styles for series list */
+.series-posts li {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+.series-posts li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+.dark-mode .series-posts li:before {
+    color: #999;
+}
+
+/* Styles for tags page links */
+#tag-sections ul li,
+#all-tags ul li {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+#tag-sections ul li:before,
+#all-tags ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+.dark-mode #tag-sections ul li:before,
+.dark-mode #all-tags ul li:before {
+    color: #999;
+}
