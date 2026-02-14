@@ -150,6 +150,7 @@ def generate_blog_pages():
                 continue
 
         # Save data files
+        save_json_data(blog_posts, 'blog_data.json')
         save_json_data(series_data, 'series_data.json')
         save_json_data(tags_data, 'tags_data.json')
 
@@ -176,7 +177,11 @@ def process_markdown_file(md_file, tags_data, backlinks, series_data, blog_posts
         try:
             html_content = markdown.markdown(
                 content,
-                extensions=['markdown.extensions.fenced_code', AnnotateExtension()]
+                extensions=[
+                    'markdown.extensions.fenced_code',
+                    'markdown.extensions.attr_list',
+                    AnnotateExtension()
+                ]
             )
         except Exception as e:
             logging.error(f"Markdown conversion error in {md_file}: {str(e)}")
@@ -209,7 +214,8 @@ def generate_blog_post(markdown_path, md_file, html_file, metadata, html_content
             "title": title,
             "file": html_file,
             "markdown": md_file,
-            "html_content": html_content
+            "html_content": html_content,
+            "date": metadata.get('date', datetime.now().strftime('%Y-%m-%d'))
         })
 
         tags = metadata.get('tags', '').split(',')

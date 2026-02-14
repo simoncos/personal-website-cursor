@@ -449,6 +449,24 @@ nav ul li a.active {
     line-height: 1.6;
 }
 
+.post-content img,
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+.post-content figure,
+.blog-post figure {
+    margin: 1.25rem 0;
+}
+
+.post-content figure img,
+.blog-post figure img {
+    margin: 0 auto;
+}
+
 /* Add more specific styles for other elements in your blog posts as needed */
 
 /* Add a separator between tags and backlinks if they're adjacent */

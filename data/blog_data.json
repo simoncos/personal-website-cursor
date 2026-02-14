@@ -1,10 +1,23 @@
 [
-    {
-        "title": "Welcome to my first blog post!",
-        "file": "first-blog-post.html"
-    },
-    {
-        "title": "Another Interesting Topic",
-        "file": "another-interesting-topic.html"
-    }
+  {
+    "title": "Another Interesting Topic",
+    "file": "another-interesting-topic.html",
+    "markdown": "another-interesting-topic.md",
+    "html_content": "<h1>Another Interesting Topic</h1>\n<p>Welcome to my second blog post! This one covers another fascinating subject.</p>\n<h2>What We'll Explore</h2>\n<ul>\n<li>Advanced blogging techniques</li>\n<li>Linking between posts</li>\n<li>Using markdown effectively</li>\n</ul>\n<p>As mentioned in <a href=\"first-blog-post.html\">My First Blog Post</a>, we're building a simple but effective blogging system.</p>\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced techniques we can use:</p>\n<ol>\n<li><strong>Internal linking</strong>: As you can see, we're linking to other posts.</li>\n<li><strong>Markdown formatting</strong>: Using <em>italics</em>, <strong>bold</strong>, and <code>code snippets</code>.</li>\n<li><strong>Lists</strong>: Like this one!</li>\n</ol>\n<h2>Conclusion</h2>\n<p>Blogging with markdown and static HTML generation can be both simple and powerful.</p>",
+    "date": "2026-02-14"
+  },
+  {
+    "title": "Welcome to my first blog post!",
+    "file": "first-blog-post.html",
+    "markdown": "first-blog-post.md",
+    "html_content": "<h1>Welcome to my first blog post!</h1>\n<p>This is a paragraph with an <span class=\"annotated-word\" data-word=\"annotated word\">annotated word</span>. When you click on it, it will open a Google search for \"annotated word\".</p>\n<p>Here's an SVG image:</p>\n<p><img alt=\"Test SVG Image\" src=\"assets/images/test-image.svg\" /></p>\n<p>This image is stored in the assets folder.</p>",
+    "date": "2026-02-14"
+  },
+  {
+    "title": "The Third Blog Post",
+    "file": "the-third.html",
+    "markdown": "the-third.md",
+    "html_content": "<h1>The Third Blog Post</h1>\n<p>Mentioned in <a href=\"first-blog-post.html\">My First Blog Post</a></p>",
+    "date": "2026-02-14"
+  }
 ]
