@@ -24,11 +24,13 @@ A modern, minimalist static blog generator that creates a feature-rich website f
 │   │   └── styles.css
 │   └── js/
 │       ├── dark-mode.js
+│       ├── site-config.js
 │       ├── load-nav.js
 │       ├── load-blog-list.js
 │       ├── toc-generator.js
 │       └── progress-bar.js
 ├── data/
+│   ├── blog_data.json
 │   ├── series_data.json
 │   └── tags_data.json
 ├── blogs/
@@ -74,7 +76,13 @@ A modern, minimalist static blog generator that creates a feature-rich website f
 
 3. **Generate Site**
    ```bash
-   python generate_blog_pages.py
+   python3 generate_blog_pages.py
+
+4. **Preview Locally**
+   ```bash
+   python3 -m http.server
+   ```
+   Then open `http://localhost:8000`.
    ```
 
 ## Writing Posts
@@ -83,7 +91,7 @@ A modern, minimalist static blog generator that creates a feature-rich website f
 ```markdown
 ---
 tags: tag1, tag2          # Comma-separated tags
-series: series-name       # Optional series name
+series: series-name       # Optional series name (leave empty to exclude from series page)
 series_part: 1           # Optional series part number
 ---
 ```
@@ -120,6 +128,13 @@ Modify templates in `templates/` to change:
 - Navigation elements
 - Meta tags and SEO elements
 
+### Site Identity (Single Source)
+Edit `src/js/site-config.js` to change site-wide identity settings:
+- `ownerName`: used in footer and dynamic page titles
+- `siteTitle`: used in page headers
+
+The site also uses `resolvePath()` in `site-config.js` to keep navigation/data loading stable across local preview and GitHub Pages.
+
 ## Browser Support
 - Chrome (latest)
 - Firefox (latest)
@@ -137,7 +152,7 @@ Modify templates in `templates/` to change:
 [MIT/Your chosen license]
 
 ## Author
-[Your Name]
+@simoncos
 
 ---
 Built with vanilla JavaScript and Python. No frameworks, no complexity. 
