@@ -149,7 +149,7 @@ The site also uses `resolvePath()` in `site-config.js` to keep navigation/data l
 5. Create a Pull Request
 
 ## License
-[MIT/Your chosen license]
+[MIT]
 
 ## Author
 @simoncos
